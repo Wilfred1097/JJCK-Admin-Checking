@@ -53,7 +53,8 @@ pool.getConnection((connectionError, connection) => {
 
 
   app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    // console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on https://jjck-admin-client-testing.onrender.com`);
   });
 });
 
