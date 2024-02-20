@@ -10,7 +10,7 @@ const Topbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:3001/logout', {
+      const response = await fetch('https://jjck-admin-server-testing.onrender.com/logout', {
         method: 'POST',
         credentials: 'include'
       });
