@@ -4,8 +4,8 @@ import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
 import { LoginvalidationSchema } from './validation/Validation';
 import Cookies from 'js-cookie';
 import axios from 'axios';
-// import { useNavigate, Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [email, setEmail] = useState('');
@@ -97,9 +97,9 @@ const App = () => {
                 <Button variant="primary" type="submit" className={`m-2 ${validationErrors.email || validationErrors.password ? '' : 'btn-block'}`}>
                   Login
                 </Button>
-                {/* <Button as={Link} to="/registration" variant='success' className='m-2 p-auto'>
-                  Register
-                </Button> */}
+                <Button as={Link} to="/registration" variant='success' className='m-2 p-auto'>
+                  Sign up
+                </Button>
               </Form>
             </Card.Body>
           </Card>
