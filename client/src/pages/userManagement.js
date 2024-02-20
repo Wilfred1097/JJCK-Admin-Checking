@@ -20,7 +20,7 @@ const UserManagement = () => {
     // Fetch user data from the API
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:3001/users');
+        const response = await fetch('https://jjck-admin-server-testing.onrender.com/users');
         if (response.ok) {
           const data = await response.json();
           setUsers(data);
@@ -49,7 +49,7 @@ const UserManagement = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3001/updateUser', {
+      const response = await fetch('https://jjck-admin-server-testing.onrender.com/updateUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ const UserManagement = () => {
         console.log('User updated successfully');
         
         // Fetch the updated user data
-        const updatedResponse = await fetch('http://localhost:3001/users');
+        const updatedResponse = await fetch('https://jjck-admin-server-testing.onrender.com/users');
         if (updatedResponse.ok) {
           const updatedData = await updatedResponse.json();
           setUsers(updatedData);

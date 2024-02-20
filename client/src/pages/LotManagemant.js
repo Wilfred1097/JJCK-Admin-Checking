@@ -29,7 +29,7 @@ const LotManagement = () => {
         // Form data is valid, proceed with submission
         // console.log(validFormData); // Log the valid form data (including images in base64 format)
   
-        fetch('http://localhost:3001/addListing', {
+        fetch('https://jjck-admin-server-testing.onrender.com/addListing', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const LotManagement = () => {
   // Fetch lot listings data from the API
   const fetchLotListings = async () => {
     try {
-      const response = await fetch('http://localhost:3001/lot-listings');
+      const response = await fetch('https://jjck-admin-server-testing.onrender.com/lot-listings');
       if (response.ok) {
         const data = await response.json();
         setLotListings(data);
@@ -169,7 +169,7 @@ const LotManagement = () => {
       console.log('Updated Listing:', updatedData);
     
       // Make a POST request to the backend server to update the listing data
-      const response = await fetch('http://localhost:3001/updateListing', { 
+      const response = await fetch('https://jjck-admin-server-testing.onrender.com/updateListing', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -182,7 +182,7 @@ const LotManagement = () => {
         console.log('Update success:', data);
   
         // Refetch the updated data from the server
-        const updatedListingsResponse = await fetch('http://localhost:3001/lot-listings');
+        const updatedListingsResponse = await fetch('https://jjck-admin-server-testing.onrender.com/lot-listings');
         if (updatedListingsResponse.ok) {
           const updatedListingsData = await updatedListingsResponse.json();
           // Update the local state with the updated data

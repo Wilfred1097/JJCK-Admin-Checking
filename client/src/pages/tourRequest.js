@@ -34,7 +34,7 @@ function TourRequestPage() {
     // Function to fetch tour requests data
     const fetchTourRequests = async () => {
         try {
-            const response = await fetch('http://localhost:3001/tour-requests');
+            const response = await fetch('https://jjck-admin-server-testing.onrender.com/tour-requests');
             if (response.ok) {
                 const data = await response.json();
                 setTourRequests(data);

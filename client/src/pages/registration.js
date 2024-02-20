@@ -21,7 +21,7 @@ const Registration = () => {
     validationSchema: RegistrationvalidationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('http://localhost:3001/register', {
+        const response = await axios.post('https://jjck-admin-server-testing.onrender.com/register', {
           completename: values.fullName,
           address: values.address,
           birthdate: values.dob,

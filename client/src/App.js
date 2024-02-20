@@ -21,7 +21,7 @@ const App = () => {
       await LoginvalidationSchema.validate({ email, password }, { abortEarly: false });
 
       // If validation passes, send the login data to the server
-      const response = await axios.post('http://localhost:3001/login', {
+      const response = await axios.post('https://jjck-admin-server-testing.onrender.com/login', {
         email,
         password,
       });
