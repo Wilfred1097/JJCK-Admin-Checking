@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: 'https://jjck-admin-client-testing.onrender.com',  // Replace with the actual origin of your client application
+  origin: 'http://localhost:3001',  // Replace with the actual origin of your client application
   credentials: true,
 }));
 app.use(bodyParser.json());
@@ -55,7 +55,7 @@ pool.getConnection((connectionError, connection) => {
 
   app.listen(PORT, () => {
     // console.log(`Server is running on http://localhost:${PORT}`);
-    console.log(`Server is running on https://jjck-admin-client-testing.onrender.com`);
+    // console.log(`Server is running on https://jjck-admin-client-testing.onrender.com`);
   });
 });
 
