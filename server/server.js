@@ -29,8 +29,9 @@ const pool = mysql.createPool({
 // const pool = mysql.createPool({
 //   host: 'b4svrhz1pxumygusk30q-mysql.services.clever-cloud.com',
 //   user: 'uvxa2eya4zuwpvll',
-//   password: 'SWphMgAOhgHQqaIMF7PC',
+//   password: 'Q2SvUshnXekmsts9M2as',
 //   database: 'b4svrhz1pxumygusk30q',
+//   port: 3306,
 //   waitForConnections: true,
 //   connectionLimit: 10,
 //   queueLimit: 0,
